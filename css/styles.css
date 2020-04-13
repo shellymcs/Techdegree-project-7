@@ -281,3 +281,43 @@ button{
 .settings button {
     width: 45%;
 }
+
+@media (min-width:768px){
+    .main-grid {
+
+        grid-template-columns: 90px 1fr ;
+        grid-template-rows: 80px auto  ;
+        grid-auto-rows: minmax(90px, auto) ;
+        grid-template-areas: "header header"
+                              "nav main"
+                              "nav main";
+    
+    }
+ nav{
+     grid-row-start: 2;
+     grid-row-end: -1;
+ }
+
+
+    .main-nav{
+        display: block;
+        justify-content: center;
+    }
+
+    main{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 80px 80px repeat(3,200px) 150px minmax(150px, auto);
+        grid-template-areas: "dashboard dashboard"
+                              "alert alert"
+                              "traffic traffic"
+                              "daily mobile"
+                              "social social"
+                              "members activity"
+                              "message settings";
+    }
+
+
+
+}
