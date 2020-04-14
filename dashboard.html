@@ -14,6 +14,7 @@
    <div class="main-grid">
     <header>
         <h1 class="app-name">Your<span>App&trade;</span></h1>
+        
        
      <div class ="bell-icon">
      <a href="#"><svg width ="30px" height= "30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -26,25 +27,30 @@
            </g>
          </g>
       </svg></a> 
+      
      </div> 
-
-     <div class="notifications"></div>
+     <div class="notifications">&bull;</div>
+     <div class="dropdown-content">
+      <p>You have an alert!</p>
+      <p>2 new members have joined since your last visit</p>
+  </div>
+     
      <img class ="profile-img" src ="images/member-1.jpg" alt ="Photo of Lucy">
       <h3 class="profile-name">Lucy Sullivan</h3>
      
     </header>
 
     <nav class="main-nav">
-        <a href=""><img src="icons/icon-dashboard.svg" alt ="Icon for dashboard" height="40px" width="40px"></a>
-        <a href=""><img src="icons/icon-members.svg" alt ="Icon for members" height="40px" width="40px"></a>
-        <a href=""><img src="icons/icon-visits.svg" alt ="Icon for visits"  height="40px" width="40px"></a>
-        <a href=""><img src="icons/icon-settings.svg" alt ="Icon for settings"  height="40px" width="40px"></a>
+        <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt ="Icon for dashboard" height="40px" width="40px"></a>
+        <a href="#member"><img src="icons/icon-members.svg" alt ="Icon for members" height="40px" width="40px"></a>
+        <a href="#visits"><img src="icons/icon-visits.svg" alt ="Icon for visits"  height="40px" width="40px"></a>
+        <a href="#setting"><img src="icons/icon-settings.svg" alt ="Icon for settings"  height="40px" width="40px"></a>
     </nav>
     
 
     <main >
       <div class="main-header"> 
-        <h2 class="headline">Dashboard</h2>
+        <h2 class="headline" id="dashboard">Dashboard</h2>
         <div class="main-header-search">
         <input type="search" placeholder="Search..." />
         </div>
@@ -57,7 +63,7 @@
   </div>
 
   <!-- line graph charts -->
-<section class="traffic">
+<section class="traffic" id="visits">
   <div class="traffic-header">
   <h3>TRAFFIC</h3>
   <ul class="traffic-nav">
@@ -161,7 +167,7 @@
    </section>
 
 
-  <section class="members">
+  <section class="members" id="member">
     <h3>NEW MEMBERS</h3>
     <div class="members-container">
     <img src="images/member-1.jpg"
@@ -254,7 +260,7 @@
   </section>
 
   <!-- local settings widget -->
-<section class="settings">
+<section class="settings" id="setting">
   <h3>SETTINGS</h3>
   <label class="switch-light switch-candy" onclick="">
     <input type="checkbox">

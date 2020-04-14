@@ -88,7 +88,7 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 20px;
-    padding-right: 20px;
+    padding-right: ;
     color:white;
     transition: transform 1s ease-out;
     
@@ -100,10 +100,29 @@ button {
 }
 
 .notifications{
-    border-left: 2px solid  rgb(62, 48, 122);
+    color: rgba(69, 194, 121, 0.87);
+    font-size: 2em;
+    border-right: 2px solid  rgb(62, 48, 122);
+    padding-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.dropdown-content{
+    display: none;
+    width: 150px;
+    height: 80px;
+    background-color: white;
+    color: lightslategray;
+    z-index: 1;
+    color: #666666;
+    font-size: .9em;
+     left: -5px;
+     padding-bottom: 25px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
 
 .profile-img{
     height: 50px;
@@ -244,7 +263,6 @@ padding-bottom: 50px;
 /*--------Alert Bar-------*/
 
 .alert {
-    
     color: white;
     width: 95%;
     height: 30px;
@@ -543,5 +561,10 @@ height: auto;
 .social-text p{
     padding-left: 10px;
 }
+
+}
+
+@media (min-width:1024px){
+
 
 }
