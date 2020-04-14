@@ -1,7 +1,7 @@
 const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
-const mobileCanvas = document.getElementById("mobile-chart");
+const mobileCanvas = document.getElementById("mobile-user-chart");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
@@ -30,6 +30,7 @@ let trafficData = {
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
     }]
+}
 
 let trafficOptions = {
         aspectRatio: 2.5,
@@ -83,6 +84,8 @@ const dailyData = {
         options: dailyOptions
         });   
 
+  //Mobile Users      
+
  const mobileData = {
      labels: ["Desktop", "Tablet", "Phones"],
      datasets: [{
@@ -105,7 +108,7 @@ const dailyData = {
     fontStyle: 'bold'
     }
     }
-    }
+    };
 
  let mobileChart = new Chart(mobileCanvas, {
      type: 'doughnut',

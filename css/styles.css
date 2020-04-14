@@ -43,7 +43,36 @@ footer{
     
 }
 
+/*---------Button Styles-----*/
+button { 
+    height: 40px;
+    color: white;
+    border-radius: 3px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
 
+.button-primary{
+    background-color: mediumpurple;
+    
+}
+.message button{
+    
+    width: 95%;
+}
+.button-disabled{
+    background-color:lightslategray;
+
+}
+
+.settings button {
+    width: 45%;
+    
+}
+
+/*---------Header-----------*/
 .app-name {
     padding-left: 20px;
     font-size: 1.4em;
@@ -131,7 +160,7 @@ main{
 }
 
 .mobile{
-    grid-area: mobile
+    grid-area: mobile;
     padding-bottom: 50px;
     border-bottom: 1px solid rgb(182, 187, 192);
 }
@@ -230,11 +259,17 @@ padding-bottom: 50px;
     display: flex;
     flex-direction: row;}
 
+.traffic-header ul{
+    margin-left: auto;
+    padding-top: 20px;
+}
 
 .traffic li {
     color: lightslategray;
     font-weight: bold;
     display: inline;
+    padding-right: 15px;
+    
 }
 
 /*-----members-----*/
@@ -329,9 +364,6 @@ height: auto;
 }
 .form-area{
     height: 150px;
-    
-}
-.form-field{
     
 }
 
