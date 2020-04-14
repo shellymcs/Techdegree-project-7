@@ -60,7 +60,7 @@ button {
 }
 .message button{
     
-    width: 95%;
+    width: 96%;
 }
 .button-disabled{
     background-color:lightslategray;
@@ -309,9 +309,14 @@ padding-bottom: 50px;
 }
 
 /*-----members-----*/
-.members-container{
+.members-container,
+.activity-container{
+    width:90%;
+    margin: auto;
     display: flex;
     flex-direction: row;
+    border-top: 1px solid lightgray;
+
 }
 
 .members-text{
@@ -340,10 +345,12 @@ padding-bottom: 50px;
 
 /*------Recent Activity-------*/
 .activity-container{
-    display: flex;
-    flex-direction: row;
+    
 }
 
+.no-border{
+    border: none;
+}
 .activity-text{
     margin-left: 20px;
    padding-bottom: 10px;
@@ -351,6 +358,7 @@ padding-bottom: 50px;
 
 .activity-container a {
     float: right;
+    padding-top: 30px;
     margin-left: auto;
     margin-right: 40px;
 }
