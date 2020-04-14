@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
@@ -52,7 +53,7 @@
 
         <!-- alert banner -->
 <div class="alert" id="alert" >
-  <!-- JS will insert alert here --> PUT AN ALERT HERE WITH JS
+  <!-- JS will insert alert here --> 
   </div>
 
   <!-- line graph charts -->
@@ -68,7 +69,7 @@
   </div>
   <div class="widget-container-full">
   <!-- element line graph will attach to -->
-  <canvas id="traffic-chart"></canvas>
+  <canvas id="traffic-chart" width="400" height="400"></canvas>
   </div>
   </section>
 
@@ -91,9 +92,10 @@
 
    <!-- Social Stats -->
    <!-- Twitter -->
+   <section class="socials">
    <h3>SOCIAL STATS</h3>
 <div class="social-container">
-  <h3>SOCIAL STATS</h3>
+  
     <div class ="social-block">
   <div class="social-image">
     <svg  widthversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -106,7 +108,7 @@
 </svg>
   </div>
    <div class="social-text">
-    <p>Twitter</p>
+    <p><span>Twitter</span></p>
     <p>10,345</p>
   </div>
 </div>
@@ -120,7 +122,7 @@
     <path class= "facebook-f" fill="white" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
     </div>
     <div class="social-text">
-      <p>Facebook</p>
+      <p><span>Facebook</span></p>
       <p>8,739</p>
     </div>
 </div>
@@ -151,12 +153,12 @@
        </svg>
         </div>
          <div class="social-text">
-           <p>Google+</p>
+           <p><span>Google+</span></p>
            <p>2,530</p>
          </div>
          </div>
      </div>
-        
+   </section>
 
 
   <section class="members">
@@ -202,14 +204,41 @@
   <section class="activity">
     <h3>RECENT ACTIVITY</h3>
     <div class="activity-container">
-    <img src="images/Sept2018Profile.jpg"
+    <img src="images/member-1.jpg"
     class="profile-image">
-    <div class="members-text">
+    <div class="activity-text">
     <p>Victoria Chambers</p>
     <a href="#">victoria.chambers80@example.com</a>
     </div>
     <p>10/15/15</p>
     </div>
+    <div class="activity-container">
+      <img src="images/member-2.jpg"
+      class="profile-image">
+      <div class="activity-text">
+      <p>Dale Byrd</p>
+      <a href="#">dale.byrd78@example.com</a>
+      </div>
+      <p>10/15/15</p>
+      </div>
+      <div class="activity-container">
+          <img src="images/member-3.jpg"
+          class="profile-image">
+          <div class="activity-text">
+          <p>Dawn Wood</p>
+          <a href="#">dawn.wood65@example.com</a>
+          </div>
+          <p>10/15/15</p>
+          </div>
+          <div class="activity-container">
+              <img src="images/member-4.jpg"
+              class="profile-image">
+              <div class="activity-text">
+              <p>Dan oliver</p>
+              <a href="#">dan.oliver52@example.com</a>
+              </div>
+              <p>10/15/15</p>
+              </div>
   </section>
 
     <!-- messaging widget -->
@@ -227,8 +256,34 @@
   <!-- local settings widget -->
 <section class="settings">
   <h3>SETTINGS</h3>
-  <!-- custom CSS toggle code-->
-  <!-- custom CSS toggle code-->
+  <label class="switch-light switch-candy" onclick="">
+    <input type="checkbox">
+  
+    <p><strong>
+     Send Email Notifications
+    </strong></p>
+  
+    <span>
+      <span>ON</span>
+      <span>OFF</span>
+      
+      <a></a>
+    </span>
+  </label>
+  <label class="switch-light switch-candy"  onclick="">
+    <input type="checkbox">
+  
+    <p><strong>
+      Set Profile to Public
+    </strong></p>
+  
+    <span>
+      <span>ON</span>
+      <span>OFF</span>
+      
+      <a></a>
+    </span>
+  </label>
   <select class="form-field" id="timezone">
   <option disabled selected>Select Timezone</option>
   <option>Eastern</option>
@@ -241,11 +296,14 @@
   <button class="button-disabled" id="cancel">Cancel</button>
   </div>
   </section>
-    
+
     </main>
     <footer>
    
     </footer>
     </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
   </html>
