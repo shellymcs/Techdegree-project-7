@@ -85,12 +85,24 @@ button {
 
 .bell-icon{
     margin-left: auto;
-    border-right: 2px solid  rgb(62, 48, 122);
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 20px;
     padding-right: 20px;
+    color:white;
+    transition: transform 1s ease-out;
+    
+}
 
+
+.bell-icon:hover{
+    transform: scale(1.2);
+}
+
+.notifications{
+    border-left: 2px solid  rgb(62, 48, 122);
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .profile-img{
@@ -98,6 +110,7 @@ button {
     width: 50px;
     border-radius: 50%;
     margin: 15px 10px 0 20px;
+    
    
 }
 
@@ -197,6 +210,7 @@ padding-bottom: 50px;
 }
 
 
+
 /*------Dashboard-----*/
 
 .headline{
@@ -253,6 +267,10 @@ padding-bottom: 50px;
     margin-right: 30px;
 }
 
+
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+    }
 /*--------traffic-----*/
 
 .traffic-header{
@@ -273,15 +291,51 @@ padding-bottom: 50px;
 }
 
 /*-----members-----*/
+.members-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.members-text{
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.members-text a{
+    text-decoration: none;
+    color:mediumpurple
+}
+
 .members img,
 .activity img{
+    margin-top: 15px;
+    margin-left: 20px;
     border-radius: 50%;
     width: 50px;
     height:50px;
 }
 
-/*------Recent Activity-------*/
+.date{
+    margin-left: auto;
+    margin-right: 20px;
+}
 
+/*------Recent Activity-------*/
+.activity-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.activity-text{
+    margin-left: 20px;
+   padding-bottom: 10px;
+}
+
+.activity-container a {
+    float: right;
+    margin-left: auto;
+    margin-right: 40px;
+}
 
 /*----------Social Stats-------*/
 .social-container{
@@ -476,6 +530,8 @@ height: auto;
                               "members activity"
                               "message settings";
     }
+   
+
 
 .social-block{
     width: 30%;
