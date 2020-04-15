@@ -193,3 +193,30 @@ $( function() {
       source: availableTags
     });
   } );
+
+  //Local storage 
+
+  const saveButton = document.getElementById('save')
+  const cancelButton = document.getElementById('cancel')
+  const checkBox = document.querySelector('.check')
+  const timeZone = document.getElementById('timezone')
+
+  saveButton.addEventListener('click', () => {
+    let toggleChecked = check.checked;
+    let saveTimezone = timeZone.value;
+    localStorage.setItem('check', toggleChecked); 
+    localStorage.setItem('timezone', saveTimezone);  
+})
+
+cancelButton.addEventListener('click', () => {
+    localStorage.clear();
+    toggleChecked.checked = false;
+    timeZone.value = timeZone.firstChild;
+})
+
+var toggleSettingStorage = JSON.parse(localStorage.getItem('toggleChecked'));
+toggleChecked.checked = toggleSettingStorage;
+var timeZoneStorage = localStorage.getItem('timezone');
+timeZone.value = timeZoneStorage;
+
+

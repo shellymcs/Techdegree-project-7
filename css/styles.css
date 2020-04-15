@@ -544,6 +544,9 @@ button {
     width: 45%;
     
 }
+.settings-button{
+padding-top: 18px;
+}
 
 @media (min-width:768px){
     .main-grid {
@@ -600,7 +603,8 @@ button {
     .activity,
     .message,
     .settings{
-        width: 95%;
+        
+        width:95%;
        margin: auto;
        border: 1px solid lightslategray;
     }
