@@ -311,12 +311,18 @@ padding-bottom: 50px;
 /*-----members-----*/
 .members-container,
 .activity-container{
+    color: lightslategray;
     width:90%;
     margin: auto;
     display: flex;
     flex-direction: row;
     border-top: 1px solid lightgray;
 
+}
+.members-container p,
+.activity-container p{
+    margin-bottom: 0;
+    
 }
 
 .members-text{
@@ -361,6 +367,9 @@ padding-bottom: 50px;
     padding-top: 30px;
     margin-left: auto;
     margin-right: 40px;
+    text-decoration: none;
+    color: mediumpurple;
+    font-size: 3em;
 }
 
 /*----------Social Stats-------*/
@@ -489,17 +498,20 @@ height: auto;
     height:30px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
     background-color: white;
-    
+}
 
 
 
 
 /*---------Button Styles-----*/
- button { 
+button { 
     height: 40px;
     color: white;
     border-radius: 3px;
+    justify-content: center;
     margin-top: 10px;
+    margin-left: 10px;
+    
 }
 
 .button-primary{
@@ -508,7 +520,7 @@ height: auto;
 }
 .message button{
     
-    width: 90%;
+    width: 96%;
 }
 .button-disabled{
     background-color:lightslategray;
@@ -542,9 +554,14 @@ height: auto;
         display: block;
         justify-content: center;
     }
+    .widget-container-full {
+        width: 90vw;
+        }
+        .widget-container-half {
+        width: 45vw;
+        }
 
     main{
-        
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 80px 80px repeat(3,200px) 150px minmax(150px, auto);
