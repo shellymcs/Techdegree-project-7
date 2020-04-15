@@ -381,7 +381,9 @@ padding-bottom: 50px;
     color: mediumpurple;
     font-size: 3em;
 }
-
+.time {
+    margin-top: 0;
+}
 /*----------Social Stats-------*/
 .social-container{
     display:flex;
@@ -620,7 +622,9 @@ button {
     .message{
         height: 400px;
     }
-    
+    .activity-container{
+        height: 100px;
+    }
     .socials{
         border: none;
     }
