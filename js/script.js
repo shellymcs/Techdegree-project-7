@@ -198,24 +198,30 @@ $( function() {
 
   const saveButton = document.getElementById('save')
   const cancelButton = document.getElementById('cancel')
-  const checkBox = document.querySelector('.check')
+  const checkEmail = document.querySelector('.checkEmail')
+  const checkPublic= document.querySelector('.checkPublic')
   const timeZone = document.getElementById('timezone')
 
   saveButton.addEventListener('click', () => {
-    let toggleChecked = check.checked;
+    let emailChecked = checkEmail.checked;
+    let publicChecked = publicEmail.checked;
     let saveTimezone = timeZone.value;
-    localStorage.setItem('check', toggleChecked); 
+    localStorage.setItem('checkEmail', emailChecked); 
+    localStorage.setItem('checkPublic', publicChecked); 
     localStorage.setItem('timezone', saveTimezone);  
 })
 
 cancelButton.addEventListener('click', () => {
     localStorage.clear();
-    toggleChecked.checked = false;
+    emailChecked.checked = false;
+    publicChecked.checked = false;
     timeZone.value = timeZone.firstChild;
 })
 
-var toggleSettingStorage = JSON.parse(localStorage.getItem('toggleChecked'));
-toggleChecked.checked = toggleSettingStorage;
+var emailSettingStorage = JSON.parse(localStorage.getItem('emailChecked'));
+emailChecked.checked = emailSettingStorage;
+var publicSettingStorage = JSON.parse(localStorage.getItem('publicChecked'));
+publicChecked.checked = publicSettingStorage;
 var timeZoneStorage = localStorage.getItem('timezone');
 timeZone.value = timeZoneStorage;
 
