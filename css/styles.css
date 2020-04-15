@@ -114,6 +114,8 @@ button {
     height: 80px;
     background-color: white;
     color: lightslategray;
+    position: static;
+    border:1px solid rgb(62, 48, 122);
     z-index: 1;
     color: #666666;
     font-size: .9em;
@@ -298,14 +300,22 @@ padding-bottom: 50px;
 .traffic-header ul{
     margin-left: auto;
     padding-top: 20px;
+    
 }
 
 .traffic li {
     color: lightslategray;
     font-weight: bold;
     display: inline;
-    padding-right: 15px;
+    padding: 5px 10px;
     
+    
+}
+
+.active {
+    background-color: rgb(138, 209, 138);
+    border-radius: 20px;
+    color: white;   
 }
 
 /*-----members-----*/
@@ -457,12 +467,13 @@ height: auto;
 }
 
 /*-------Settings--------*/
+
 .settings{
     padding-bottom: 50px;
 }
 
 .settings span{
-    text-shodow: none;
+    text-shadow: none;
 }
 .settings label{
     display: flex;
@@ -554,11 +565,17 @@ button {
         display: block;
         justify-content: center;
     }
+
+    .traffic{
+        width: 95%;
+       margin: auto;
+    }
+
     .widget-container-full {
-        width: 90vw;
+        width: 85vw;
         }
         .widget-container-half {
-        width: 45vw;
+        width: 40vw;
         }
 
     main{
@@ -574,6 +591,39 @@ button {
                               "message settings";
     }
    
+    .traffic,
+    .daily,
+    .mobile,
+    .members,
+    .activity,
+    .message,
+    .settings{
+        width: 95%;
+       margin: auto;
+       border: 1px solid lightslategray;
+    }
+
+    .settings,
+    .activity,
+    .mobile{
+        margin-left: 0;
+    }
+
+    .daily,
+    .members,
+    .message{
+        margin-right: 0;
+    }
+    .members,
+    .activity,
+    .settings,
+    .message{
+        height: 400px;
+    }
+    
+    .socials{
+        border: none;
+    }
 
 
 .social-block{
@@ -590,6 +640,9 @@ button {
 }
 
 @media (min-width:1024px){
-
+    .widget-container-full {
+        width: 87vw;
+        }
 
 }
+

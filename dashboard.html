@@ -5,6 +5,7 @@
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
@@ -240,7 +241,7 @@
               <img src="images/member-4.jpg"
               class="profile-image">
               <div class="activity-text">
-              <p>Dan oliver posted YourApp's SEO Tips</p>
+              <p>Dan Oliver posted YourApp's SEO Tips</p>
               <p>1 day ago</p>
               </div>
               <a href="#">&rsaquo;</a>
@@ -250,9 +251,11 @@
     <!-- messaging widget -->
 <section class="message">
   <h3>MESSAGE USER</h3>
-  <form class="widget-container">
+  <form class="widget-container" >
+    <div class="ui-widget">
   <input type="text" placeholder="Search for user"
-  class="form-field" id="userField">
+  class="form-field" id="formField" >
+</div>
   <textarea placeholder="Message for user" class="form-area"
   id= "messageField" ></textarea>
   <button class="button-primary" id="send" >Send</button>
@@ -290,6 +293,8 @@
       <a></a>
     </span>
   </label>
+
+
   <select class="form-field" id="timezone">
   <option disabled selected>Select Timezone</option>
   <option>Eastern</option>
@@ -311,6 +316,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/script.js"></script>
   </body>
   </html>

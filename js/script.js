@@ -33,12 +33,20 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
+//Traffic
+const currentData = [
+    [50, 80, 120, 100, 70, 90, 140, 100, 40, 60, 80],
+    [200, 300, 400, 200, 250, 260, 240, 200, 200, 300, 350],
+    [50, 80, 120, 100, 70, 90, 140, 100, 40, 60, 80],
+    [200, 300, 400, 200, 250, 260, 240, 200, 200, 300, 350],
+  ];
+
 let trafficData = {
+    type: 'line',
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
-    data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
-    2500],
+    data: currentData[2],
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
     }]
@@ -62,10 +70,36 @@ let trafficOptions = {
  };
 
  let trafficChart = new Chart(trafficCanvas, {
-     type: 'line',
-     data: trafficData,
-     options: trafficOptions
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
  });     
+
+ function addChart(chart, data) {
+    chart.data.datasets.forEach(dataset => {
+      dataset.data = data;
+    });
+    chart.update();
+  }
+  
+  function removeChart(chart) {
+    chart.data.datasets.forEach(dataset => {
+      dataset.data = [];
+    });
+    chart.render();
+  }
+
+ const listTime = document.querySelectorAll(".traffic-nav-link");
+  
+        for (let i = 0; i < listTime.length; i++) {
+          listTime[i].addEventListener("click", function(e) {
+            const current = document.querySelector(".active");
+            current.className = e.target.className.replace(" active", "");
+            this.className += " active";
+            removeChart(trafficChart);
+            addChart(trafficChart, currentData[i]);
+          });
+        }
 
  // data for daily traffic bar chart
 const dailyData = {
@@ -95,6 +129,8 @@ const dailyData = {
         data: dailyData,
         options: dailyOptions
         });   
+
+ 
 
   //Mobile Users      
 
@@ -142,3 +178,18 @@ const dailyData = {
    alert(`Message successfully sent to: ${user.value}`);
      }
 });
+
+//search user
+$( function() {
+    var availableTags = [
+      "Dan Oliver",
+      "Lucy Sullivan",
+      "Victoria Chambers",
+      "Dale Byrd",
+      "Dawn Wood"
+      
+    ];
+    $( "#formField" ).autocomplete({
+      source: availableTags
+    });
+  } );
