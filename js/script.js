@@ -194,35 +194,29 @@ $( function() {
     });
   } );
 
-  //Local storage 
+  
+//Local storage 
+const saveButton = document.getElementById('save');
+const cancelButton = document.getElementById('cancel');
+const checkEmail = document.querySelector('.checkEmail');
+const checkPublic= document.querySelector('.checkPublic');
+const timeZone = document.getElementById('timezone');
 
-  const saveButton = document.getElementById('save')
-  const cancelButton = document.getElementById('cancel')
-  const checkEmail = document.querySelector('.checkEmail')
-  const checkPublic= document.querySelector('.checkPublic')
-  const timeZone = document.getElementById('timezone')
-
-  saveButton.addEventListener('click', () => {
-    let emailChecked = checkEmail.checked;
-    let publicChecked = publicEmail.checked;
-    let saveTimezone = timeZone.value;
-    localStorage.setItem('checkEmail', emailChecked); 
-    localStorage.setItem('checkPublic', publicChecked); 
-    localStorage.setItem('timezone', saveTimezone);  
-})
+saveButton.addEventListener('click', () => {
+  localStorage.setItem('checkEmail', checkEmail.checked); 
+  localStorage.setItem('checkPublic', checkPublic.checked); 
+  localStorage.setItem('timezone', timeZone.selectedIndex);  
+});
 
 cancelButton.addEventListener('click', () => {
-    localStorage.clear();
-    emailChecked.checked = false;
-    publicChecked.checked = false;
-    timeZone.value = timeZone.firstChild;
-})
+  localStorage.clear();
+  checkEmail.checked = false;
+  checkPublic.checked = false;
+  timeZone.selectedIndex = 0;
+});
 
-var emailSettingStorage = JSON.parse(localStorage.getItem('emailChecked'));
-emailChecked.checked = emailSettingStorage;
-var publicSettingStorage = JSON.parse(localStorage.getItem('publicChecked'));
-publicChecked.checked = publicSettingStorage;
-var timeZoneStorage = localStorage.getItem('timezone');
-timeZone.value = timeZoneStorage;
+checkEmail.checked = JSON.parse(localStorage.getItem('checkEmail'));
+checkPublic.checked = JSON.parse(localStorage.getItem('checkPublic'));
+timeZone.selectedIndex = localStorage.getItem('timezone');
 
 
