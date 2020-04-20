@@ -14,7 +14,7 @@ bellDropdown.addEventListener('click', () => {
     dropdownContent.style.display = 'block';
 })
 
-bellDropdown.addEventListener('mouseout', () => {
+dropdownContent.addEventListener('click', () => {
     dropdownContent.style.display = 'none';
 })
 

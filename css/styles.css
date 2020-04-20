@@ -285,6 +285,7 @@ padding-bottom: 50px;
 .alert-banner-close{
     margin-left: auto;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 
@@ -360,8 +361,9 @@ padding-bottom: 50px;
 }
 
 /*------Recent Activity-------*/
-.activity-container{
-    
+.activity-container,
+.members-container{
+    height: 100px;
 }
 
 .no-border{
